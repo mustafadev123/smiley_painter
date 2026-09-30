@@ -471,9 +471,7 @@ class SmileyPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant SmileyPainter oldDelegate) {
-    return oldDelegate.mood != mood ||
-        oldDelegate.faceType != faceType ||
-        oldDelegate.faceColor != faceColor;
-  }
+bool shouldRepaint(covariant SmileyPainter oldDelegate) {
+  return true;
+}
 }
