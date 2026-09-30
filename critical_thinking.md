@@ -1,0 +1,5 @@
+# Graduate Critical Thinking — When Should a Painter Repaint?
+
+I tested two versions of `shouldRepaint` using the same smiley application. In the first version, `shouldRepaint` always returned `true`, which tells Flutter that the painter may redraw whenever a new painter is evaluated even if its drawing inputs have not changed. In the second version, I compared the previous and current values of `mood`, `faceType`, and `faceColor`.
+
+Both versions correctly updated the drawing when I moved the mood slider or changed the face. However, the field-comparison version is more appropriate for this application because the Canvas only needs to repaint when one of the values that affects the drawing changes. Therefore, my final implementation compares `mood`, `faceType`, and `faceColor` instead of always returning `true`.
